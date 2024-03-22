@@ -97,7 +97,7 @@ interface Contributors: CoroutineScope {
                 launch(Dispatchers.Default) {
                     loadContributorsProgress(service, req) { users, completed ->
                         withContext(Dispatchers.Main) {
-                            updateResults(users, startTime, completed)
+                            updateResults(users, startTime, completed) 
                         }
                     }
                 }.setUpCancellation()
