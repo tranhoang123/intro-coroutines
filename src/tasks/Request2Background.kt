@@ -7,6 +7,8 @@ import kotlin.concurrent.thread
 
 fun loadContributorsBackground(service: GitHubService, req: RequestData, updateResults: (List<User>) -> Unit) {
     thread {
-        loadContributorsBlocking(service, req)
+       val a = loadContributorsBlocking(service, req)
+
+        updateResults(a)
     }
 }
